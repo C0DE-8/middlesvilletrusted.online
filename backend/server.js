@@ -12,11 +12,20 @@ const app = express();
 
 app.set('trust proxy', 1);
 
-// Enable CORS
+const allowedOrigins = new Set([
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'https://middlesvilletrusted.online',
+  'https://www.middlesvilletrusted.online',
+]);
+
 app.use(cors({
-  origin: '*', // or replace '*' with your frontend URL, e.g., 'http://localhost:3000'
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  credentials: true
+  origin(origin, callback) {
+    callback(null, !origin || allowedOrigins.has(origin));
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
 
 // In server.js or app.js

@@ -24,7 +24,7 @@ const stylesheets = [
   "temp/custom/base/css/owl.theme.default.min.css",
   "temp/custom/base/css/style.css",
   "temp/custom/base/css/responsive.css",
-  "temp/custom/base/css/customstyle.css",
+  "temp/custom/base/css/customstyle.css?v=2",
 ];
 
 const scripts = [

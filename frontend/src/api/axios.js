@@ -1,8 +1,8 @@
 // /src/api/axios.js
 import axios from "axios";
 
-export const API_BASE_URL = "https://api.westbridgevaultreserve.online/api";
-export const API_ORIGIN = "https://api.westbridgevaultreserve.online";
+export const API_BASE_URL = "https://api.middlesvilletrusted.valtherainvestments.com/api";
+export const API_ORIGIN = "https://api.middlesvilletrusted.valtherainvestments.com";
 
 // export const API_BASE_URL = "https://api.stercxabank.veliport24.com/api";
 // export const API_ORIGIN = "https://api.stercxabank.veliport24.com";
