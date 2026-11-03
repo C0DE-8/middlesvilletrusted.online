@@ -600,7 +600,7 @@ export default function AdminUsers() {
                   <input
                     value={editForm.routing_name}
                     onChange={(event) => setEditForm((current) => ({ ...current, routing_name: event.target.value }))}
-                    placeholder="West Bridge Vault Reserve"
+                    placeholder="Middlesville Trusted"
                   />
                 </label>
                 <label className={styles.field}>

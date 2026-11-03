@@ -29,7 +29,7 @@ const statusLabel = {
   rejected: "Rejected",
 };
 
-const DEFAULT_BANK_NAME = "West Bridge Vault Reserve";
+const DEFAULT_BANK_NAME = "Middlesville Trusted";
 
 export default function CardsPage() {
   const navigate = useNavigate();

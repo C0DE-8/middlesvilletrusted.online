@@ -27,9 +27,9 @@ import { useAuth } from "../../context/AuthContext";
 import { useTheme } from "../../context/ThemeContext";
 import { useNavigate } from "react-router-dom";
 import { resolveAsset } from "../../utils/assets";
+import { BRAND_MARK, BRAND_NAME } from "../../constants/brand";
 
-const BRAND_LOGO = "/style-two/temp/custom/img/logo.png";
-const DEFAULT_BANK_NAME = "West Bridge Vault Reserve";
+const DEFAULT_BANK_NAME = BRAND_NAME;
 
 export default function Dashboard() {
   const { userUser, logout } = useAuth();
@@ -310,10 +310,10 @@ export default function Dashboard() {
       <aside className={styles.sidebar}>
         <div className={styles.brandBlock}>
           <div className={styles.brandLogo}>
-            <img src={BRAND_LOGO} alt="West Bridge Vault Reserve" />
+            <img src={BRAND_MARK} alt="" />
           </div>
           <div>
-            <h2 className={styles.brandTitle}>West Bridge</h2>
+            <h2 className={styles.brandTitle}>{BRAND_NAME}</h2>
             <p className={styles.brandSubtitle}>Banking Dashboard</p>
           </div>
         </div>

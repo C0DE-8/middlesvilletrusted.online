@@ -17,9 +17,8 @@ import {
 } from "react-icons/fi";
 import GlassToast, { useGlassToast } from "../../components/Toast/GlassToast";
 import { useAuth } from "../../context/AuthContext";
+import { BRAND_MARK, BRAND_NAME } from "../../constants/brand";
 import styles from "./Admin.module.css";
-
-const BRAND_LOGO = "/style-two/temp/custom/img/logo.png";
 
 const sections = [
   { path: "/admin", label: "Overview", end: true, icon: FiGrid },
@@ -75,10 +74,10 @@ export default function Admin() {
       <aside className={`${styles.sidebar} ${menuOpen ? styles.sidebarOpen : ""}`}>
         <div className={styles.brand}>
           <div className={styles.brandMark}>
-            <img src={BRAND_LOGO} alt="West Bridge Vault Reserve" />
+            <img src={BRAND_MARK} alt="" />
           </div>
           <div>
-            <strong>West Bridge Admin</strong>
+            <strong>{BRAND_NAME} Admin</strong>
             <span>Operations Console</span>
           </div>
           <button

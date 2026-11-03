@@ -280,7 +280,7 @@ export default function AdminSettings() {
               </div>
             )}
             <div className={styles.profileMeta}>
-              <strong>{profileForm.full_name || adminUser?.full_name || "West Bridge Admin"}</strong>
+              <strong>{profileForm.full_name || adminUser?.full_name || "Middlesville Trusted Admin"}</strong>
               <span>{profileForm.email || adminUser?.email || "Admin email"}</span>
             </div>
           </div>
@@ -343,7 +343,7 @@ export default function AdminSettings() {
           <div>
             <span className={styles.settingsEyebrow}><FiLock /> Password</span>
             <h2>Change password</h2>
-            <p>Update the password used for admin access to West Bridge operations.</p>
+            <p>Update the password used for admin access to Middlesville Trusted operations.</p>
           </div>
         </div>
 

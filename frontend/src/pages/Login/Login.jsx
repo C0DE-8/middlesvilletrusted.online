@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { registerUser } from "../../api/authApi";
+import { BRAND_LOGO, BRAND_NAME } from "../../constants/brand";
 import GlassToast, { useGlassToast } from "../../components/Toast/GlassToast";
 import CustomSelect from "../../components/Form/CustomSelect";
 import LanguageSwitcher from "../../components/ui/LanguageSwitcher";
@@ -9,7 +10,6 @@ import LogoPreloader from "../../components/ui/LogoPreloader";
 import styles from "./Login.module.css";
 
 const ONBOARDING_DRAFT_KEY = "stercxa_onboarding_draft";
-const BRAND_LOGO = "/style-two/temp/custom/img/logo.png";
 
 const emptyRegistration = {
   first_name: "",
@@ -546,7 +546,7 @@ export default function Login() {
       <div className={`${styles.loginShell} ${mode === "register" ? styles.registerShell : ""} ${mounted ? styles.showShell : ""}`}>
         <div className={styles.formPanel}>
           <Link className={styles.logoRow} to="/">
-            <img className={styles.logoImage} src={BRAND_LOGO} alt="West Bridge Vault Reserve" />
+            <img className={styles.logoImage} src={BRAND_LOGO} alt={BRAND_NAME} />
           </Link>
 
           <div className={styles.formContent}>
@@ -583,8 +583,8 @@ export default function Login() {
             <p className={styles.subtitle}>
               {mode === "login"
                 ? isAdminAuth
-                  ? "Sign in to access the West Bridge Vault Reserve admin console and manage customer approvals, support, and platform operations."
-                  : "Sign in to access your West Bridge Vault Reserve dashboard, manage transactions, monitor accounts, and stay in control securely."
+                  ? `Sign in to access the ${BRAND_NAME} admin console and manage customer approvals, support, and platform operations.`
+                  : `Sign in to access your ${BRAND_NAME} dashboard, manage transactions, monitor accounts, and stay in control securely.`
                 : "Submit your banking profile and identification documents for admin review before account numbers are issued."}
             </p>
 
@@ -941,7 +941,7 @@ export default function Login() {
             <div className={styles.stars}>✦ ✦</div>
             <h2>Bank smarter with secure online banking built for daily control.</h2>
             <p>
-              West Bridge Vault Reserve gives you seamless transfers, account visibility,
+              {BRAND_NAME} gives you seamless transfers, account visibility,
               funding support, and a modern banking experience built for today.
             </p>
 

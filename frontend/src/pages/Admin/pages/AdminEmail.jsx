@@ -71,7 +71,7 @@ export default function AdminEmail() {
           <span className={styles.settingsEyebrow}><FiMail /> Gmail Mailer</span>
           <h2>Send Email</h2>
           <p>
-            Send plain text or HTML emails from the configured Gmail account. The message is wrapped in the West Bridge Vault Reserve email header and footer.
+            Send plain text or HTML emails from the configured Gmail account. The message is wrapped in the Middlesville Trusted email header and footer.
           </p>
         </div>
         <button className={styles.secondaryBtn} type="button" onClick={sendTestEmail} disabled={testing || !status.configured}>

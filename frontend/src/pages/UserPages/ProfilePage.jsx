@@ -182,7 +182,7 @@ export default function ProfilePage() {
                 <div><span>Account title</span><strong>{profile?.full_name || "Not set"}</strong></div>
                 <div><span>Username</span><strong>{profile?.username || "Not set"}</strong></div>
                 <div><span>Email</span><strong>{profile?.email || "Not set"}</strong></div>
-                <div><span>Support route</span><strong>Contact West Bridge support for authorized changes</strong></div>
+                <div><span>Support route</span><strong>Contact Middlesville Trusted support for authorized changes</strong></div>
               </div>
             </section>
 

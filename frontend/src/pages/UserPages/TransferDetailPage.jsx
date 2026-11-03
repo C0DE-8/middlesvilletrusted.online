@@ -63,7 +63,7 @@ export default function TransferDetailPage() {
   const summaryRows = [
     { label: transferKind === "self" ? "Transfer amount" : "Amount", value: amountLabel },
     { label: transferKind === "self" ? "To account" : transferKind === "wire" ? "Beneficiary bank" : "Recipient", value: transferKind === "self" ? transfer?.to_account : transfer?.account_name || transfer?.bank_name || "Beneficiary" },
-    { label: transferKind === "self" ? "Source account" : "Sender's bank", value: transferKind === "self" ? transfer?.from_account : transfer?.bank_name || "West Bridge Vault Reserve" },
+    { label: transferKind === "self" ? "Source account" : "Sender's bank", value: transferKind === "self" ? transfer?.from_account : transfer?.bank_name || "Middlesville Trusted" },
   ];
   const moreRows = [
     transfer?.account_number ? { label: transferKind === "self" ? "Account route" : "Account number", value: transfer.account_number, copy: true } : null,

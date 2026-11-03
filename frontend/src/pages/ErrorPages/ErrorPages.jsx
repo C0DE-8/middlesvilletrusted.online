@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiAlertTriangle, FiArrowLeft, FiHome, FiShield } from "react-icons/fi";
+import { BRAND_LOGO, BRAND_NAME } from "../../constants/brand";
 import styles from "./ErrorPages.module.css";
-
-const BRAND_LOGO = "/style-two/temp/custom/img/logo.png";
 
 function ErrorLayout({ code, title, description, tone = "warn" }) {
   return (
@@ -12,7 +11,7 @@ function ErrorLayout({ code, title, description, tone = "warn" }) {
 
       <section className={styles.shell}>
         <Link className={styles.brand} to="/">
-          <img src={BRAND_LOGO} alt="West Bridge Vault Reserve" />
+          <img src={BRAND_LOGO} alt={BRAND_NAME} />
         </Link>
 
         <div className={`${styles.badge} ${tone === "danger" ? styles.badgeDanger : ""}`}>
@@ -44,7 +43,7 @@ export function NotFoundPage() {
     <ErrorLayout
       code="404"
       title="Page not found"
-      description="The page you requested does not exist or is no longer available on West Bridge Vault Reserve."
+      description={`The page you requested does not exist or is no longer available on ${BRAND_NAME}.`}
     />
   );
 }

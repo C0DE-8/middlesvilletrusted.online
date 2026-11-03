@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { BRAND_LOGO, BRAND_NAME } from "../../constants/brand";
 import LanguageSwitcher from "../../components/ui/LanguageSwitcher";
 import LogoPreloader from "../../components/ui/LogoPreloader";
 import styles from "./VerifyLoginOTP.module.css";
-
-const BRAND_LOGO = "/style-two/temp/custom/img/logo.png";
 
 export default function VerifyLoginOTP() {
   const navigate = useNavigate();
@@ -91,14 +90,14 @@ export default function VerifyLoginOTP() {
       <div className={`${styles.loginShell} ${mounted ? styles.showShell : ""}`}>
         <div className={styles.formPanel}>
           <div className={styles.logoRow}>
-            <img className={styles.logoImage} src={BRAND_LOGO} alt="West Bridge Vault Reserve" />
+            <img className={styles.logoImage} src={BRAND_LOGO} alt={BRAND_NAME} />
           </div>
 
           <div className={styles.formContent}>
             <h1>Verify login OTP</h1>
             <p className={styles.subtitle}>
               Enter the one-time password sent to your email to complete your
-              secure sign in and continue to your West Bridge Vault Reserve dashboard.
+              secure sign in and continue to your {BRAND_NAME} dashboard.
             </p>
 
             <form className={styles.form} onSubmit={handleSubmit}>
@@ -159,7 +158,7 @@ export default function VerifyLoginOTP() {
             <h2>Secure every login with trusted verification.</h2>
             <p>
               Your account security matters. Confirm your one-time password and
-              continue with confidence using West Bridge Vault Reserve's protected login flow.
+              continue with confidence using {BRAND_NAME}'s protected login flow.
             </p>
 
             <div className={styles.usersRow}>

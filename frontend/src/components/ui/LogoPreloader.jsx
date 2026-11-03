@@ -1,6 +1,5 @@
 import styles from "./LogoPreloader.module.css";
-
-const DEFAULT_LOGO = "/style-two/temp/custom/img/logo.png";
+import { BRAND_MARK } from "../../constants/brand";
 
 export default function LogoPreloader({ label = "Loading", compact = false, overlay = false, fullPage = false }) {
   return (
@@ -12,7 +11,7 @@ export default function LogoPreloader({ label = "Loading", compact = false, over
       aria-live="polite"
     >
       <span className={styles.logoRing} aria-hidden="true">
-        <img src={DEFAULT_LOGO} alt="" />
+        <img src={BRAND_MARK} alt="" />
       </span>
       <span>{label}</span>
     </div>
